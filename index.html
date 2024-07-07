@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follower Alert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: green; /* Black background */
+            font-family: 'Aquire', sans-serif; /* Futuristic font */
+        }
+
+        .follower-alert {
+            position: relative; /* Ensure positioning context */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+            border: 2px solid #00ffea; /* Neon cyan border */
+            border-radius: 15px;
+            padding: 40px; /* Increased padding */
+            margin: 20px; /* Increased margin */
+            animation: fadeIn 1s ease-in-out;
+            max-width: 80%; /* Limit maximum width */
+        }
+
+        .new-banner {
+            position: absolute;
+            top: 10px; /* Adjust distance from top */
+            right: 10px; /* Adjust distance from right */
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .alert-content {
+            text-align: center;
+            color: #00ffea; /* Neon cyan color */
+        }
+
+        .alert-content img {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .alert-content h1 {
+            font-size: 2em; /* Larger font size */
+        }
+
+        .follower-name {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+            border: 1px solid #00ffea; /* Neon cyan border */
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 10px;
+            height: 50px;
+        }
+
+        .follower-name p {
+            margin: 0;
+            font-size: 1.8em; /* Larger font size */
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="follower-alert">
+        <div class="new-banner">NEW</div>
+        <div class="alert-content">
+            <img src="red.png" alt="Follower Alert">
+            <h1>New Follower!</h1>
+            <div class="follower-name">
+                <p id="follower-name"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
